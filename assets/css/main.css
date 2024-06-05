@@ -20,7 +20,7 @@
 /* Global Colors */
 :root {
   /* Background Color - This color is applied to the background of the entire website as well as individual sections. */
-  --background-color: #f8fafd;
+  --background-color: #ffffff;
 
   /* Default Color - This is the default color used for the majority of the text content. */
   --default-color: #3d4348;
@@ -857,6 +857,7 @@ section,
   display: flex;
   align-items: center;
   overflow: hidden;
+  background-color: #f8fafd;
 }
 
 .hero .hero-bg img {
