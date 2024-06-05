@@ -104,7 +104,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 60px;
   margin-right: 8px;
 }
 
@@ -871,7 +871,7 @@ section,
 
 .hero .hero-bg::before {
   content: "";  
-  background: color-mix(in srgb, #f8fafd, transparent 0%);
+  background: color-mix(in srgb, #f8fafd, transparent 70%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1257,7 +1257,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services {
-  --background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
+  --background-color: #FFFFFF;
 }
 
 .services .service-item {
