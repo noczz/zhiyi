@@ -876,7 +876,7 @@ section,
 
 .hero .hero-bg::before {
   content: "";  
-  background: color-mix(in srgb, #f8fafd, transparent 41%);
+  background: color-mix(in srgb, #f8fafd, transparent 100%);
   position: absolute;
   inset: 0;
   z-index: 2;
