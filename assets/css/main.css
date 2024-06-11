@@ -1424,17 +1424,10 @@ section,
 --------------------------------------------------------------*/
 .more-features .features-image {
   position: relative;
-  min-height: 400px;
 }
 
-.more-features .features-image img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+.more-features .features-image img { margin-bottom: 10%;
+  max-width: 100%;
 }
 
 .more-features h3 {
@@ -2057,11 +2050,12 @@ section,
   /* Add your styles here */
 }
 
-/* .my-col-lg-6 {
-  flex: 0 0 auto;
-  min-width: 600px;
-  width: 30%;
-} */
+@media (min-width:768px) {
+  .my-col-lg-6 {
+    flex: 0 0 auto;
+    width: 33%;
+  } */
+}
 
 .navblock {
   justify-content: space-between;
