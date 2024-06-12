@@ -2071,3 +2071,15 @@ section,
 .navblock {
   justify-content: space-between;
 }
+
+.bi-briefcase::before {
+  content: "\F35C";
+}
+
+.bi-card-checklist::before {
+  content: "\F6A5";
+}
+
+.bi-bar-chart::before {
+  content: "\F3EE";
+}
