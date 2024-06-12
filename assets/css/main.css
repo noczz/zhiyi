@@ -1424,7 +1424,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
-/* @mediat (min-width: 640px) {
+/* @media (min-width: 640px) {
   .row {
     display: flex;
   }
