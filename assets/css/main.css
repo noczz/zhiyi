@@ -2083,3 +2083,10 @@ section,
 .bi-bar-chart::before {
   content: "\F3EE";
 }
+
+
+.my-img-fluid {
+  height: auto;
+  width: 100%;
+}
+
