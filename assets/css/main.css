@@ -340,8 +340,7 @@ section {
 --------------------------------------------------------------*/
 
 .hero {
-  margin: var(--header-desktop-height) 0 0;
-  padding: 0;
+  padding: var(--header-desktop-height) 0 0;
 }
 
 .hero .hero-bg {
