@@ -608,7 +608,7 @@ section {
 
 @media (max-width: 640px) {
   .introduction ul li span {
-    margin: auto 14px auto 20px;
+    margin: auto 8px auto 12px;
     font-size: 16px;
   }
   .introduction ul li {
