@@ -627,31 +627,38 @@ section {
 }
 
 .introduction .intro-img img {
+  display: flex;
   border-radius: 10px;
   width: 100%;
-  height: 100%;
-  /*object-fit: cover;*/
+  object-fit: fill;
   transition: 0.3s;
 }
 
 .introduction .intro-img img:hover {
-  transform: scale(1.5) !important;
+  transform: scale(1.2) !important;
   box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
 .introduction .intro-img img:nth-child(1) {
-  grid-row: 1 / 3;
-  grid-column: 1 / 2;
+  height: 100%;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .introduction .intro-img img:nth-child(2) {
-  grid-row: 1 / 2;
-  grid-column: 2 / 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .introduction .intro-img img:nth-child(2) {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 /*--------------------------------------------------------------
