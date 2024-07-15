@@ -73,8 +73,9 @@
   /*--hero-bg-originHeight: 900px;*/
   /*--hero-desktop-bottom: 120px;*/
 
-  --hero-desktop-height: calc(100vh - var(--header-desktop-height));
-  --hero-mobile-height: calc(100vh - var(--header-mobile-height));
+  --hero-desktop-height: calc(85vh - var(--header-desktop-height));
+  --hero-mobile-landscape-height: calc(100vh - var(--header-mobile-height));
+  --hero-mobile-portrait-height: calc(60vh - var(--header-mobile-height));
 }
 
 :root {
@@ -335,17 +336,56 @@ p {
 section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 80px 0;
   overflow: clip;
   /*scroll-margin-top: 100px;*/
+}
+
+.section-title h2 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 70px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title p {
+  /*margin-bottom: 0;*/
+}
+
+@media (max-width: 999px) and (max-height: 640px),
+(max-width: 640px) and (max-height: 999px){
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .section-title h2:after {
+    width: 50px;
+    height: 4px;
+    border-radius: 2px;
+  }
 }
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-
 .hero {
-  padding: var(--header-desktop-height) 0 0 0;
+  padding-block: var(--header-desktop-height) 0;
 }
 
 .hero .hero-bg {
@@ -439,11 +479,11 @@ section {
   }
 
   .hero .hero-bg img {
-    height: var(--hero-mobile-height);
+    height: var(--hero-mobile-landscape-height);
   }
 
   .hero .container {
-    height: var(--hero-mobile-height);
+    height: var(--hero-mobile-landscape-height);
     max-width: 500px;
     display: flex;
     flex-wrap: wrap;
@@ -464,13 +504,13 @@ section {
   }
 
   .hero .hero-qr {
-    width: 200px;
+    /*width: 200px;*/
   }
 
   .hero .hero-qr img {
     margin: 0;
     border: 5px solid #ffffff3f;
-    height: 120px;
+    height: 100px;
   }
 
   .hero .hero-qr div {
@@ -493,23 +533,26 @@ section {
     font-size: 16px;
   }
 }
+/* For mobile portrait */
+@media (max-width: 640px) and (max-height: 999px){
+  .hero .hero-bg img {
+    height: var(--hero-mobile-portrait-height);
+  }
+
+  .hero .container {
+    height: var(--hero-mobile-portrait-height);
+  }
+}
 
 /*--------------------------------------------------------------
-# About Section
+# Features Section
 --------------------------------------------------------------*/
 
-.about {
-  padding-top: 20px;
-  overflow: visible;
+.features {
+  padding-block: 20px;
 }
 
-.about .container {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Featured Services */
-.featured-services {
+.features .container {
   /**
    * NOTE:
    * Flex Box
@@ -526,7 +569,7 @@ section {
   overflow: hidden;
 }
 
-.featured-services>div {
+.features .container>div {
   flex: 1;
   min-width: var(--container-min-width);
 
@@ -540,25 +583,40 @@ section {
 
 }
 
-.featured-services>div:hover {
+.features .container>div:hover {
   box-shadow: 3px 3px 10px color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.featured-services>div .feature-icon {
+.features .container>div .feature-icon {
   min-width: 100px;
   transition: 0.3s;
 }
 
-.featured-services>div .feature-icon:hover {
+.features .container>div .feature-icon:hover {
   transform: scale(1.1);
 }
 
-.featured-services>div .feature-text {
+.features .container>div .feature-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 0;
 }
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+.about {
+  /*padding-top: 20px;*/
+  overflow: visible;
+}
+
+.about .container {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /* introduction */
 .introduction {
@@ -650,10 +708,49 @@ section {
 }
 
 .introduction .intro-img img:hover {
-  transform: scale(1.2) !important;
+  transform: scale(1.1) !important;
   box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 30%);
 }
+/*--------------------------------------------------------------
+# Awards Section
+--------------------------------------------------------------*/
+.awards>div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  gap: 6vw;
+}
 
+.awards .inventions img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.awards .certificates {
+  display: flex;
+  gap: 2vw;
+}
+
+.awards .certificates div {
+  flex: 1;
+}
+
+.awards .certificates img {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.awards .certificates .cert-img-first:hover {
+  transform: translate(+20vw, 0) scale(3);
+}
+
+.awards .certificates .cert-img-last:hover {
+  transform: translate(-20vw, 0) scale(3);
+}
+
+.awards .certificates img:hover {
+  transform: scale(3);
+  /*box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 30%);*/
+}
 
 /*--------------------------------------------------------------
 # Preloader
