@@ -73,7 +73,7 @@
   /*--hero-bg-originHeight: 900px;*/
   /*--hero-desktop-bottom: 120px;*/
 
-  --hero-desktop-height: calc(85vh - var(--header-desktop-height));
+  --hero-desktop-height: calc(80vh - var(--header-desktop-height));
   --hero-mobile-landscape-height: calc(100vh - var(--header-mobile-height));
   --hero-mobile-portrait-height: calc(60vh - var(--header-mobile-height));
 }
@@ -549,7 +549,7 @@ section {
 --------------------------------------------------------------*/
 
 .features {
-  padding-block: 20px;
+  padding-block: 10px;
 }
 
 .features .container {
@@ -711,6 +711,7 @@ section {
   transform: scale(1.1) !important;
   box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 30%);
 }
+
 /*--------------------------------------------------------------
 # Awards Section
 --------------------------------------------------------------*/
@@ -721,6 +722,7 @@ section {
 }
 
 .awards .inventions img {
+  margin-top: 20px;
   width: 100%;
   object-fit: cover;
 }
@@ -751,6 +753,61 @@ section {
   transform: scale(3);
   /*box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 30%);*/
 }
+
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.testimonials {
+}
+
+.testimonials .testimonial-item {
+  /*background-color: var(--contras-color);*/
+  padding: 30px;
+  margin: 120px 30px 50px 30px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px color-mix(in srgb, var(--accent-color), transparent 90%);
+  transition: 0.3s;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+  position: relative;
+  width: 140px;
+  transform: translate(0, calc(-50% - 30px));
+  margin-bottom: -80px;
+}
+
+.testimonials .testimonial-item h3 {
+  color: var(--accent-color);
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 10px 0 5px 0;
+}
+
+.testimonials .testimonial-item h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--default-color);
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 0;
+  position: relative;
+}
+
+
+.testimonials .swiper-slide {
+  opacity: 0.3;
+}
+
+.testimonials .swiper-slide-next {
+  opacity: 1 !important;
+  transform: scale(1.12);
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
