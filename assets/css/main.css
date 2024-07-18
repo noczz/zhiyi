@@ -763,7 +763,6 @@ section {
 }
 
 .testimonials .testimonial-item {
-  /*background-color: var(--contras-color);*/
   padding: 30px;
   margin: 120px 30px 50px 30px;
   min-height: 400px;
@@ -955,6 +954,70 @@ section {
 .solutions-text .nav-link p {
   font-size: 16px;
   margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Advantages Section
+--------------------------------------------------------------*/
+.advantages .advantages-text {
+  display: flex;
+  justify-content: center;
+  margin: -30px 0 30px 0;
+  cursor: pointer;
+}
+
+.advantages .advantages-text .nav-tabs {
+  border: 0;
+}
+
+.advantages-text .nav-tabs .nav-item .nav-link {
+  color: var(--default-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 18px;
+  margin: 0 -14px;
+  padding: 4px 35px;
+}
+
+@media (max-width: 640px) {
+  .advantages-text .nav-tabs .nav-item .nav-link {
+    margin: 0 -12px;
+    padding: 4px 24px;
+    font-size: 12px;
+  }
+}
+
+.advantages-text .nav-tabs .nav-item .nav-link:hover,
+.advantages-text .nav-tabs .nav-item .nav-link.active {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.advantages-img .tab-content {
+}
+
+.advantages-img .tab-content div {
+}
+
+.advantages-img .tab-content div img {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 1000px;
+}
+
+/*--------------------------------------------------------------
+# Partners Section
+--------------------------------------------------------------*/
+
+.partners {
+  background-color: var(--background-color-1);
+}
+
+.partners .partners-logo {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2vw;
 }
 
 /*--------------------------------------------------------------
