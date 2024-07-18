@@ -886,7 +886,7 @@ section {
 
 .solutions .solutions-img {
   flex: 6;
-  min-width: 600px;
+  min-width: 500px;
 }
 
 @media (max-width: 640px) {
