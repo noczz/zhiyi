@@ -1020,6 +1020,12 @@ section {
   gap: 2vw;
 }
 
+@media (max-width: 999px) {
+  .partners .partners-logo {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
