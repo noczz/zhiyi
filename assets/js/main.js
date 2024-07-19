@@ -71,26 +71,32 @@
   }
 
   /**
-   * Scroll top button
+   * Float block
    */
-  // let scrollTop = document.querySelector('.scroll-top');
-  //
-  // function toggleScrollTop() {
-  //   if (scrollTop) {
-  //     window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-  //   }
-  // }
-  // scrollTop.addEventListener('click', (e) => {
-  //   e.preventDefault();
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: 'smooth'
-  //   });
-  // });
+  
+  // btn-wechat
+  var btnWechat = document.getElementById('btn-wechat');
+  var popWechat = document.getElementById('pop-wechat');
 
-  // window.addEventListener('load', toggleScrollTop);
-  // document.addEventListener('scroll', toggleScrollTop);
+  btnWechat.addEventListener('mouseover', function() {
+    popWechat.classList.add('active');
+  });
 
+  btnWechat.addEventListener('mouseout', function() {
+    popWechat.classList.remove('active');
+  });
+
+  // btn-phone
+  var btnPhone = document.getElementById('btn-phone');
+  var popPhone = document.getElementById('pop-phone');
+
+  btnPhone.addEventListener('mouseover', function() {
+    popPhone.classList.add('active');
+  });
+
+  btnPhone.addEventListener('mouseout', function() {
+    popPhone.classList.remove('active');
+  });
   /**
    * Animation on scroll function and init
    */
