@@ -341,7 +341,13 @@ section {
   background-color: var(--background-color-0);
   padding: 80px 0;
   overflow: clip;
-  /*scroll-margin-top: 100px;*/
+  scroll-margin-top: 50px;
+}
+
+@media (max-width: 640px) {
+  section, .section {
+    /*scroll-margin-top: 30px;*/
+  }
 }
 
 .section-title h2 {
@@ -1070,6 +1076,141 @@ section {
   border-radius: 10px;
 }
 
+/*--------------------------------------------------------------
+# Global footer
+--------------------------------------------------------------*/
+.footer {
+  background-color: var(--accent-color);
+  height: 280px;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container .contact {
+  flex: 4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+}
+
+.contact .contact-text {
+  font-size: 18px;
+  color: var(--contrast-color);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact .contact-text div {
+  flex: 1;
+}
+
+.contact .contact-qr {
+  display: flex;
+}
+
+.contact .contact-qr div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 20px;
+  align-items: center;
+}
+
+.contact .contact-qr p {
+  margin: 5px 0px;
+  color: var(--contrast-color);
+  font-size: 14px;
+}
+
+.contact .contact-qr img {
+  width: 100px;
+}
+
+.contact .contact-qr div:nth-child(2) img {
+  border-radius: 50%;
+}
+
+.container .copyright {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid color-mix(in srgb, var(--contrast-color), transparent 70%);
+}
+
+.container .copyright p {
+  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
+  font-size: 13px;
+  margin: 0;
+}
+
+@media (max-width: 779px) {
+  .footer {
+    height: 360px;
+  }
+
+  .container .contact {
+    gap: 0;
+  }
+
+  .contact .contact-text {
+    gap: 10px;
+  }
+
+  .contact .contact-text div {
+    font-size: 12px;
+    /*margin: 0;*/
+  }
+
+  .contact .contact-qr img {
+    width: 80px;
+  }
+
+  .container .copyright p {
+    font-size: 10px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+/*.scroll-top {*/
+/*  position: fixed;*/
+/*  visibility: hidden;*/
+/*  opacity: 0;*/
+/*  right: 15px;*/
+/*  bottom: -15px;*/
+/*  z-index: 99999;*/
+/*  background-color: var(--accent-color);*/
+/*  width: 44px;*/
+/*  height: 44px;*/
+/*  border-radius: 50px;*/
+/*  transition: all 0.4s;*/
+/*}*/
+/**/
+/*.scroll-top i {*/
+/*  font-size: 24px;*/
+/*  color: var(--contrast-color);*/
+/*  line-height: 0;*/
+/*}*/
+/**/
+/*.scroll-top:hover {*/
+/*  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);*/
+/*  color: var(--contrast-color);*/
+/*}*/
+/**/
+/*.scroll-top.active {*/
+/*  visibility: visible;*/
+/*  opacity: 1;*/
+/*  bottom: 15px;*/
+/*}*/
 
 /*--------------------------------------------------------------
 # Preloader
