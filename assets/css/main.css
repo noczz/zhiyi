@@ -999,16 +999,22 @@ section {
   border: 2px solid var(--accent-color);
 }
 
-.advantages-img .tab-content {
-}
-
-.advantages-img .tab-content div {
-}
-
 .advantages-img .tab-content div img {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
+  max-width: 1000px;
+}
+
+.advantages .advantages-bye {
+  display: flex;
+  background-color: var(--background-color-1);
+  justify-content: center;
+  margin: 20px;
+  padding: 40px;
+}
+
+.advantages .advantages-bye img {
   max-width: 1000px;
 }
 
