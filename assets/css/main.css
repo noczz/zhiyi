@@ -78,7 +78,7 @@
 
   --hero-desktop-height: calc(80vh - var(--header-desktop-height));
   --hero-mobile-landscape-height: calc(100vh - var(--header-mobile-height));
-  --hero-mobile-portrait-height: calc(60vh - var(--header-mobile-height));
+  --hero-mobile-portrait-height: calc(75vh - var(--header-mobile-height));
 }
 
 :root {
@@ -200,6 +200,7 @@ p {
     /*transition: 0.3s;*/
   }
 
+  .navmenu a.active,
   .navmenu a:hover {
     color: var(--accent-color);
   }

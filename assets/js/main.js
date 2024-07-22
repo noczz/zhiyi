@@ -41,7 +41,9 @@
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
         mobileNavToogle();
+        console.log("navmenu toggle")
       }
+      console.log("navmenu clicked");
     });
 
   });
