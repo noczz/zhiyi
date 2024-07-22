@@ -1039,6 +1039,12 @@ section {
   max-width: 1200px;
 }
 
+@media (max-width: 999px) {
+  .advantages .advantages-bye img {
+    max-width: 100%;
+  }
+}
+
 /*--------------------------------------------------------------
 # Partners Section
 --------------------------------------------------------------*/
