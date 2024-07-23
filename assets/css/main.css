@@ -420,10 +420,6 @@ section {
   padding-block: var(--header-desktop-height) 0;
 }
 
-.hero .hero-bg {
-  /*height: 2000px;*/
-}
-
 .hero .hero-bg img {
   position: absolute;
   display: block;
@@ -533,10 +529,6 @@ section {
     color: var(--contrast-color);
     font-size: 18px;
     font-weight: 300;
-  }
-
-  .hero .hero-qr {
-    /*width: 200px;*/
   }
 
   .hero .hero-qr img {
