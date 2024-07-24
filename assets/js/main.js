@@ -1,9 +1,9 @@
 /**
-* Template Name: QuickStart
-* Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
-* Updated: Jun 02 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Site Name: 智衣科技
+* Site URL: http://zhiyi.iipcloud.com
+* Updated: July 22 2024
+* Author: 智衣团队
+* License: None
 */
 
 (function() {
@@ -67,15 +67,16 @@
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
+    window.addEventListener('DOMContentLoaded', () => {
       preloader.remove();
     });
+
   }
 
   /**
    * Float block
    */
-  
+
   // btn-wechat
   var btnWechat = document.getElementById('btn-wechat');
   var popWechat = document.getElementById('pop-wechat');
@@ -99,6 +100,7 @@
   btnPhone.addEventListener('mouseout', function() {
     popPhone.classList.remove('active');
   });
+
   /**
    * Animation on scroll function and init
    */
@@ -110,15 +112,11 @@
       mirror: false
     });
   }
-  window.addEventListener('load', aosInit);
-  console.log("aos.js inited successfully");
-
-  /**
-   * Initiate glightbox
-   */
-  // const glightbox = GLightbox({
-  //   selector: '.glightbox'
-  // });
+  window.addEventListener('DOMContentLoaded', function () {
+    setTimeout(() => {
+      aosInit();
+    }, 100);
+  });
 
   /**
    * Frequently Asked Questions Toggle
