@@ -63,17 +63,6 @@
   });
 
   /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('DOMContentLoaded', () => {
-      preloader.remove();
-    });
-
-  }
-
-  /**
    * Float block
    */
 
@@ -102,6 +91,7 @@
   });
 
   /**
+   * Preloader
    * Animation on scroll function and init
    */
   function aosInit() {
@@ -112,11 +102,35 @@
       mirror: false
     });
   }
-  window.addEventListener('DOMContentLoaded', function () {
-    setTimeout(() => {
-      aosInit();
-    }, 100);
-  });
+ 
+  document.addEventListener('DOMContentLoaded', function() {
+    const preloader = document.querySelector('#preloader');
+    var heroSection = document.getElementById('hero');
+    var heroImgs = heroSection.getElementsByTagName('img');
+    var loadedCount = 0;
+    var totalImgs = heroImgs.length;
+
+    function checkAllImagesLoaded() {
+        if (++loadedCount >= totalImgs) {
+            preloader.remove();
+            setTimeout(() => {
+              aosInit();
+              // AOS.refresh();
+            }, 100);
+        }
+    }
+
+
+    for (var i = 0; i < heroImgs.length; i++) {
+      heroImgs[i].addEventListener('load', checkAllImagesLoaded);
+      if (heroImgs[i].complete && heroImgs[i].naturalWidth !== 0) {
+          checkAllImagesLoaded();
+        }
+      // console.log('loadedCount: ' + loadedCount);
+    }
+  }); // })
+ 
+
 
   /**
    * Frequently Asked Questions Toggle
